@@ -37,7 +37,7 @@
                     <label for="">Keterangan</label>
                     <textarea name="keterangan" id="" cols="30" rows="10" class="form-control" disabled>{{ $pelaporan->keterangan }}</textarea>
                 </div>
-                @if ($pelaporan->status == 'proses' && Auth::user()->role != 3)
+                @if ($pelaporan->status == 'proses' && Auth::user()->role_id != 3)
                 <div class="form-group">
                     <form action="{{ route('pelaporan.validasi', $pelaporan->id) }}" method="post">
                         @csrf
