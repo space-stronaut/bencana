@@ -11,6 +11,7 @@
         <div class="card-body">
             <form action="{{ route('user.update', $user->id) }}" method="post">
                 @csrf
+@method('PUT')
                 <div class="form-group">
                     <label for="">Nama</label>
                     <input type="text" name="name" value="{{ $user->name }}" id="" class="form-control">
